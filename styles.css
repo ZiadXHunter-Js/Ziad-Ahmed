@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+/* ! Start up  */
+
+/* ! Navbar  */
+
+nav {
+    height: 80px;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a img {
+    width: 80px;
+    height: 65px;
+    pointer-events: none;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    transition: .6s all ease;
+}
+
+nav ul li a:hover {
+    color: #9f9f9f;
+}
+
+#contactmeli a {
+    background-color: #fff;
+    padding: 15px 25px;
+    border: 2.5px #fff solid;
+    border-radius: 30px;
+    color: #000;
+}
+
+#contactmeli a:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+/* ! Home page  */
+
+.Home {
+    height: 100vh;
+    background: linear-gradient(-81deg, black 50% , white 50%);
+    padding: 0 170px 0 170px;
+}
+
+.HomeContent {
+    height: calc(95% - 80px);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HomeContentText {
+    height: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+}
+
+.welcomeHome {
+    font-size: 40px;
+}
+
+.name-workContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name-workContent h1 {
+    font-size: 80px;
+}
+
+.name-workContent p {
+    font-size: 22px;
+    color: #909090;
+    font-weight: bolder;
+}
+
+.homeContentLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.homeContentLinks a i {
+    font-size: 37px;
+    color: #000;
+    transition: .6s all ease;
+}
+
+.homeContentLinks a i:hover {
+    color: gold;
+}
+
+/* ! Styles for Home Img  */
+.homeImg {
+    width: 600px;
+    height: 600px;
+    float: right;
+    background: linear-gradient(to top left, #4e54c8, #8f94fb);
+    background-image: url(./Assets/Home/HomeImg.jpeg);
+    background-position: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px #ffffff4d;
+
+    animation: morph 17s infinite ease-in-out;
+    transition: all 0.4s ease;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    25% {
+        border-radius: 30% 70% 60% 40% / 40% 60% 30% 70%;
+    }
+    50% {
+        border-radius: 70% 30% 60% 40% / 50% 50% 30% 50%;
+    }
+    75% {
+        border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+/*  ! Scroll btn Style  */
+
+#scrollBtn {
+    transform: scale(0);
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #000;
+    cursor: pointer;
+    transition: .6s ease all;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#scrollBtn i {
+    color: #fff;
+    font-size: 24px;
+    transition: .6s ease all;
+}
+
+#scrollBtn:hover i {
+    margin-bottom: 10px;
+}
+
+
+/* ! About me */
+
+.About {
+    height: 100vh;
+    width: 100%;
+    padding: 0 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutContent {
+    width: 49%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.AboutImg {
+    width: 49%;
+    height: 600px;
+    border-radius: 20px;
+
+    background-image: url(./Assets/Home/HomeImg.jpeg);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: inset 0 0 0 9px #ffffff4d;
+}
+
+.aboutContent h1 {
+    font-size: 38px;
+    color: #333;
+}
+
+.projectsDashboardAbtMe {
+    display: flex;
+    gap: 15px;
+}
+
+.projectsDashboardAbtMe div {
+    width: 140px;
+    height: 110px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 15px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: .6s all ease;
+}
+
+.projectsDashboardAbtMe div i {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.projectsDashboardAbtMe div h1 {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.projectsDashboardAbtMe div h2 {
+    font-size: 12px;
+    color: #333;
+    font-weight: 500;
+}
+
+.aboutContent p {
+    font-size: 18px;
+    color: #333;
+}
+
+.linksAbtMe {
+    align-self: flex-start;
+    display: flex;
+    gap: 26px;
+}
+
+.linksAbtMe a i {
+    font-size: 32px;
+    color: #000;
+    transition: .6s all ease;
+}
+
+.linksAbtMe a i:hover {
+    color: gold;
+}
+
+
+
+
+
+
+/* ! Media Screen (Responsive) */
+
+@media only screen and (max-width: 1596px)  {
+    .Home , .About {
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (max-width: 1480px)  {
+    .Home , .About {
+        padding: 0 80px;
+    }
+}
+
+@media only screen and (max-width: 1444px)  {
+    .Home , .About {
+        padding: 0 60px;
+    }
+}
+
+@media only screen and (max-width: 1420px) {
+    .aboutContent {
+        padding: 80px;
+    }
+}
+
+@media only screen and (max-width: 1386px)  {
+
+    nav a img {
+        width: 70px;
+        height: 55px;
+    }
+
+    nav ul li a {
+        font-size: 14.5px;
+    }
+
+    #contactmeli a {
+        padding: 12px 22px;
+    }
+
+    .HomeContentText {
+        gap: 30px;
+    }
+
+    .welcomeHome {
+        font-size: 32px;
+    }
+
+    .name-workContent h1 {
+        font-size: 60px;
+    }
+
+    .name-workContent p {
+        font-size: 18px;
+    }
+
+    .homeContentLinks {
+        gap: 17px;
+    }
+
+    .homeContentLinks a i {
+        font-size: 32px;
+    }
+
+    .homeImg {
+        width: 500px;
+        height: 500px;
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 1298px){
+    .Home , .About {
+        padding: 0 50px;
+    }
+
+    nav a img {
+        width: 60px;
+        height: 45px;
+    }
+
+    nav ul li a {
+        font-size: 13.5px;
+    }
+
+    #contactmeli a {
+        padding: 8px 18px;
+    }
+
+    .HomeContentText {
+        gap: 30px;
+    }
+
+    .welcomeHome {
+        font-size: 32px;
+    }
+
+    .name-workContent h1 {
+        font-size: 60px;
+    }
+
+    .name-workContent p {
+        font-size: 18px;
+    }
+
+    .homeContentLinks {
+        gap: 17px;
+    }
+
+    .homeContentLinks a i {
+        font-size: 32px;
+    }
+
+    .aboutContent {
+        padding: 60px;
+    }
+}
+
+@media only screen and (max-width: 1184px){
+    .welcomeHome {
+        font-size: 28px;
+    }
+
+    .name-workContent h1 {
+        font-size: 52px;
+    }
+
+    .name-workContent p {
+        font-size: 15px;
+    }
+
+    .homeContentLinks a i {
+        font-size: 30px;
+    }
+
+    .homeImg {
+        width: 420px;
+        height: 420px;
+    }
+
+    .aboutContent {
+        height: 500px;
+        padding: 30px;
+    }
+
+    .AboutImg {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 1118px){
+    .Home , .About {
+        padding: 0 40px;
+    }
+
+    nav ul {
+        gap: 38px;
+    }
+}
+
+@media only screen and (max-width: 1066px){
+    .Home , .About {
+        padding: 0 38px;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    .homeImg {
+        width: 400px;
+        height: 400px;
+        margin-right: 20px;
+    }
+
+    .AboutImg {
+        height: 450px;
+    }
+
+    .aboutContent {
+        height: 450px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 998px){
+    .Home , .About {
+        padding: 0 36px;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    .homeImg {
+        width: 400px;
+        height: 400px;
+        margin-right: 20px;
+    }
+
+    .projectsDashboardAbtMe div {
+        width: 120px;
+        height: 90px;
+    }
+
+    .projectsDashboardAbtMe div h1 {
+        font-size: 12px;
+    }
+
+    .projectsDashboardAbtMe div h2 {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 928px){
+    .homeImg {
+        margin-right: 0px;
+    }
+
+    .Home , .About {
+        padding: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 890px){
+    nav ul {
+        gap: 19px;
+    }
+
+    .welcomeHome {
+        font-size: 24px;
+    }
+
+    .name-workContent h1 {
+        font-size: 45px;
+    }
+
+    .name-workContent p {
+        font-size: 14px;
+    }
+
+    .homeContentLinks a i {
+        font-size: 24px;
+    }
+
+    .homeImg {
+        width: 380px;
+        height: 380px;
+    }
+
+    .aboutContent {
+        height: 400px;
+        padding: 30px;
+    }
+
+    .AboutImg {
+        height: 400px;
+    }
+
+    .projectsDashboardAbtMe div {
+        width: 110px;
+        height: 80px;
+        padding: 8px;
+    }
+
+    .projectsDashboardAbtMe div i {
+        font-size: 1.1rem;
+    }
+
+    .projectsDashboardAbtMe div h1 {
+        font-size: 13px;
+    }
+
+    .projectsDashboardAbtMe div h2 {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 880px){
+    .Home {
+        background: #fff;
+    }
+
+    .HomeContent {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    nav {
+        padding: 0 40px;
+    }
+
+    nav ul li a {
+        color: #000;
+        font-size: 18px;
+    }
+    
+    #contactmeli a {
+        color: #fff;
+        background-color: #000;
+        border: 2.5px #000 solid;
+    }
+
+    #contactmeli a:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .homeImg {
+        width: 90%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .welcomeHome {
+        font-size: 40px;
+    }
+
+    .name-workContent h1 {
+        font-size: 80px;
+    }
+
+    .name-workContent p {
+        font-size: 18px;
+    }
+
+    .homeContentLinks a i {
+        font-size: 34px;
+    }
+
+    .About {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .AboutImg {
+        width: 100%;
+        height: 50%;
+    }
+
+    .aboutContent {
+        width: 100%;
+        padding: 0;
+    }
+
+    .projectsDashboardAbtMe {
+        width: 100%;
+    }
+
+    .projectsDashboardAbtMe div {
+        width: 31%;
+        height: 150px;
+        padding: 18px;
+    }
+
+    .projectsDashboardAbtMe div i {
+        font-size: 2rem;
+    }
+
+    .projectsDashboardAbtMe div h1 {
+        font-size: 24px;
+    }
+
+    .projectsDashboardAbtMe div h2 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 649px){
+    .logo {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 569px){
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .welcomeHome {
+        font-size: 30px;
+    }
+
+    .name-workContent h1 {
+        font-size: 60px;
+    }
+
+    .name-workContent p {
+        font-size: 16px;
+    }
+
+    .homeContentLinks a i {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 527px){
+    .projectsDashboardAbtMe div {
+        height: 130px;
+    }
+
+    .projectsDashboardAbtMe div i {
+        font-size: 1.7rem;
+    }
+
+    .projectsDashboardAbtMe div h1 {
+        font-size: 20px;
+    }
+
+    .projectsDashboardAbtMe div h2 {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 483px){
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    #contactmeli a {
+        padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 455px){
+    nav ul {
+        gap: 10px;
+    }
+
+    .AboutImg {
+        height: 40%;
+    }
+
+    .projectsDashboardAbtMe div i {
+        font-size: 1.4rem;
+    }
+
+    .projectsDashboardAbtMe div h1 {
+        font-size: 17px;
+    }
+
+    .projectsDashboardAbtMe div h2 {
+        font-size: 12px;
+    }
+
+    .projectsDashboardAbtMe div {
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 443px){
+    nav {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .Home {
+        padding: 0;
+    }
+
+    .aboutContent h1 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .welcomeHome {
+        font-size: 25px;
+    }
+
+    .name-workContent h1 {
+        font-size: 47px;
+    }
+
+    .name-workContent p {
+        font-size: 14px;
+    }
+
+    .homeContentLinks a i {
+        font-size: 24px;
+    }
+
+    .About {
+        padding: 10px;
+    }
+}
+
+
